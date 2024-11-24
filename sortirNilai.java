@@ -6,8 +6,10 @@ public class sortirNilai {
         Scanner in = new Scanner(System.in);
         List<Tugas> daftarTugas = Sortir.tambahTugas();
 
+        System.out.println("\n==========================================");
         System.out.println("\nDaftar tugas sebelum diurutkan:");
-        Sortir.printList(daftarTugas);
+        Sortir.printList(daftarTugas);        
+        System.out.println("\n==========================================\n");
 
         List<Tugas> daftarTugasInsertion = new ArrayList<>(daftarTugas);
         List<Tugas> daftarTugasSelection = new ArrayList<>(daftarTugas);
