@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.*;
 
 public class sortirNilai {
@@ -13,6 +12,8 @@ public class sortirNilai {
 
         List<Tugas> daftarTugasInsertion = new ArrayList<>(daftarTugas);
         List<Tugas> daftarTugasSelection = new ArrayList<>(daftarTugas);
+        Sortir.selectionSort(daftarTugasSelection);
+        Sortir.printList(daftarTugasInsertion);
 
         while (true) {
             try {
@@ -26,16 +27,14 @@ public class sortirNilai {
 
                 switch (pilihan) {
                     case 1:
-                        Sortir.insertionSort(daftarTugasInsertion);
-                        System.out.println("\nHasil sorting menggunakan insertion sort:");
-                        Sortir.printList(daftarTugasInsertion);
-                        System.out.println("Jumlah iterasi : " + Sortir.iterasiInsert);
-                        break;
-                    case 2:
-                        Sortir.selectionSort(daftarTugasSelection);
                         System.out.println("\nHasil sorting menggunakan selection sort:");
                         Sortir.printList(daftarTugasSelection);
-                        System.out.println("Jumlah iterasi: " + Sortir.iterasiSelection);
+                        System.out.println("Jumlah iterasi: " + Sortir.getIterasiSelection());
+                        break;
+                    case 2:
+                        Sortir.insertionSort(daftarTugasInsertion);
+                        System.out.println("\nHasil sorting menggunakan insertion sort:");
+                        System.out.println("Jumlah iterasi : " + Sortir.getIterasiInsert());
                         break;
                     default:
                         System.out.println("Opsi tidak ada di pilihan");

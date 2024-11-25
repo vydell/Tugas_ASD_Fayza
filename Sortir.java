@@ -1,14 +1,14 @@
 import java.util.*;
 
 class Sortir {
-    static int iterasiInsert = 0;
-    static int iterasiSelection = 0;
+    private static int iterasiInsert = 0;
+    private static int iterasiSelection = 0;
 
-    public int getIterasiInsert() {
+    public static int getIterasiInsert() {
         return iterasiInsert;
     }
 
-    public int getIterasiSelection() {
+    public static int getIterasiSelection() {
         return iterasiSelection;
     }
 
